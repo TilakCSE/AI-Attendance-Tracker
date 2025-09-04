@@ -1,13 +1,13 @@
 # AI-Powered Attendance Tracker (Face Recognition)
 
-A beginner-friendly, modular Python application that uses face recognition to automatically mark attendance. Built with OpenCV, `face_recognition`, SQLite, and Tkinter.
+A beginner-friendly, modular Python application that uses face recognition to automatically mark attendance. Built with OpenCV, `face_recognition`, SQLite, and PyQt5.
 
 ## Features
 
 - Dataset Creation: Register students by capturing images from the webcam and saving them in `dataset/{student_id}_{student_name}/`.
 - Real-time Recognition: Recognize registered students using `face_recognition` and OpenCV.
 - Attendance Logging: SQLite database (`attendance.db`) with tables for Students and Attendance Logs.
-- GUI: Tkinter interface to Register Students, Start Attendance, View Attendance, and Export to CSV/Excel.
+- GUI: PyQt5 interface to Register Students, Start Attendance, View Attendance, and Export to CSV/Excel.
 - Duplicate Protection: Prevents multiple "Present" entries for the same student on the same date, and avoids duplicates within a single session.
 
 ### Project Insight (Institution-Scale Additions)
@@ -23,7 +23,7 @@ A beginner-friendly, modular Python application that uses face recognition to au
 - `database.py` — SQLite setup and operations (students, attendance logs, exports).
 - `dataset_creator.py` — Capture and store student face images from the webcam.
 - `attendance_recognition.py` — Load known faces and mark attendance in real time.
-- `gui.py` — Tkinter GUI integrating all modules.
+- `gui.py` — PyQt5 GUI integrating all modules.
 - `main.py` — Entry point to launch the app.
 - `requirements.txt` — Dependencies.
 - `dataset/` — Generated dataset folders after registration.
@@ -35,7 +35,7 @@ A beginner-friendly, modular Python application that uses face recognition to au
 - A working webcam.
 - Platform-specific notes:
   - The `face_recognition` package depends on `dlib`. Many platforms have prebuilt wheels; ensure you have a compatible Python version. If installation fails, refer to the `face_recognition` docs for prerequisites (e.g., CMake, Visual C++ Build Tools on Windows).
-  - Tkinter and sqlite3 are part of the Python standard library. Ensure your Python installation includes Tk support.
+  - PyQt5 and sqlite3 are part of the Python standard library. Ensure your Python installation includes Tk support.
 
 ## Setup
 
